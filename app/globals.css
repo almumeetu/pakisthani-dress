@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Li+Ador+Noirrit:wght@400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 20, 20, 20;
+    --background-end-rgb: 20, 20, 20;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Bengali Font Family */
+.font-bengali {
+  font-family: 'Li Ador Noirrit', serif;
+}
+
+/* Hero Section Specific Styles */
+.hero-gradient {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  min-height: 100vh;
+}
+
+/* Decorative Elements */
+.decorative-element {
+  position: absolute;
+}
+
+/* Enhanced text readability with shadows */
+.hero-title,
+.hero-subtitle,
+.hero-description {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo responsive sizing */
+.hero-logo {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Button enhancements */
+.hero-button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  
+  .hero-button-text {
+    font-size: 1.25rem;
+  }
+
+  .hero-gradient {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  
+  .hero-button-text {
+    font-size: 1.125rem;
+  }
+
+  .hero-gradient {
+    min-height: 70vh;
+  }
+}
+
+/* Background image optimization */
+@media (max-width: 768px) {
+  .hero-bg-mobile {
+    object-position: center right;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
