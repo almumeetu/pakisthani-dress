@@ -2,6 +2,7 @@
 
 import { MdCheckCircle } from 'react-icons/md'
 import { featuresData } from '@/data/featuresContent'
+import OrderButton from '@/components/OrderButton'
 
 export default function Features() {
   return (
@@ -60,9 +61,7 @@ export default function Features() {
               ))}
             </div>
 
-            <button className="px-6 sm:px-7 py-3 sm:py-3.5 bg-red-600 rounded-lg inline-flex justify-center items-center gap-2 hover:bg-red-700 transition-colors">
-              <div className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold font-serif">{featuresData.button.text}</div>
-            </button>
+            <OrderButton />
           </div>
         </div>
       </div>
