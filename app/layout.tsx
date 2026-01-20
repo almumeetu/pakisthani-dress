@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import 'swiper/css'
+import { StoreProvider } from '@/context/StoreContent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,13 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bn">
-      <head>
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Li+Ador+Noirrit:wght@400;600;700;800&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-white`}>
+        <StoreProvider>
+          {children}
+        </StoreProvider>
+      </body>
     </html>
   )
 }

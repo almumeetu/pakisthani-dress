@@ -1,5 +1,7 @@
+"use client"
 import Image from 'next/image'
 import { heroContent } from '@/data/heroContent'
+import OrderButton from '@/components/OrderButton'
 
 export default function Hero() {
   return (
@@ -41,13 +43,8 @@ export default function Hero() {
             <div className="self-stretch justify-start text-zinc-800 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold font-bengali leading-[1.5] md:leading-7">
               {heroContent.description.line1}{' '}
               <br className="hidden sm:block" />{' '}
-              {heroContent.description.line2}
             </div>
-            <div className="px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 bg-red-600 rounded-lg inline-flex justify-center items-center gap-2 hover:bg-red-700 transition-colors cursor-pointer">
-              <div className="justify-start text-white text-xl sm:text-2xl md:text-3xl font-bold font-['Li_Ador_Noirrit']">
-                {heroContent.cta.text}
-              </div>
-            </div>
+            <OrderButton />
           </div>
         </div>
       </div>

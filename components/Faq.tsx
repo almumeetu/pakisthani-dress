@@ -47,9 +47,6 @@ export default function FAQ() {
               </div>
             </div>
           </div>
-
-          {/* Right Section (Accordion List) */}
-          {/* Mobile এ নেগেটিভ মার্জিন রিমুভ করা হয়েছে (lg:ml-[-100px]) */}
           <div className="flex-1 py-12 lg:py-44 px-6 sm:px-12 lg:pl-32 lg:pr-16 bg-neutral-100 flex flex-col justify-start items-stretch lg:ml-[-100px] z-0">
             {faqContent.faqs.map((faq, index) => (
               <div

@@ -15,8 +15,7 @@ export const heroContent = {
     secondary: 'Pakistani Dress',
   },
   description: {
-    line1: 'সেই ডিজাইন—যেটা পরলে আলাদা করে কিছু বলার দরকার পড়ে না.',
-    line2: 'ফ্যাশন-লাভারদের নতুন obsession',
+    line1: 'সেই ডিজাইন—যেটা পরলে আলাদা করে কিছু বলার দরকার পড়ে না. ফ্যাশন-লাভারদের নতুন obsession',
   },
   cta: {
     text: 'এখনই অর্ডার করুন',

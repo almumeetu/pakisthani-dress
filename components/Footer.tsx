@@ -84,7 +84,6 @@ function ContactItem({
 }) {
   return (
     <div className={`flex items-start gap-2 ${grow ? "flex-1" : ""}`}>
-      {/* ICON */}
       <div
         className={`flex h-5 w-5 items-center justify-center text-[16px] text-zinc-800 ${highlight
             ? "shadow-[0px_0px_0px_4px_rgba(156,219,79,0.20)] rounded"
@@ -93,8 +92,6 @@ function ContactItem({
       >
         {icon}
       </div>
-
-      {/* TEXT */}
       <div className="inline-flex flex-col justify-center items-start">
         <div className="text-zinc-800 text-base font-semibold leading-5">
           {title}
@@ -112,7 +109,6 @@ function Divider() {
     <div className="hidden xl:block w-px self-stretch bg-neutral-200" />
   );
 }
-
 function FooterLink({ text }: { text: string }) {
   return (
     <span className="text-zinc-600 text-base underline cursor-pointer hover:text-zinc-800">

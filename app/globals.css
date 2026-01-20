@@ -214,5 +214,14 @@ body {
       right: 3rem;
     }
   }
+
+  /* Continuous Swiper styling for marquee-like autoplay */
+  .continuous-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .continuous-swiper .swiper-slide {
+    width: auto !important;
+  }
 }
 
