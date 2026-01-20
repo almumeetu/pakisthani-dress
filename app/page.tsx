@@ -4,6 +4,7 @@ import Collection from '@/components/Collection'
 import AboutComponent from '@/components/About'
 import FAQ from '@/components/Faq'
 import Footer from '@/components/Footer'
+import SizeChart from '@/components/SizeChart'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutComponent />
       <Collection />
       <FAQ />
+      <SizeChart />
       <Footer />
     </main>
   )

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Li+Ador+Noirrit:wght@400;600;700;800&display=swap');
+
+/* ignore the error for tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -201,4 +203,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Custom responsive position utilities (match design) */
+  @media (min-width: 640px) {
+    .sm\:-top-8 {
+      top: -3rem;
+    }
+
+    .sm\:-right-8 {
+      right: 3rem;
+    }
+  }
 }
+

@@ -3,6 +3,7 @@
 import { MdCheckCircle } from 'react-icons/md'
 import { featuresData } from '@/data/featuresContent'
 import OrderButton from '@/components/OrderButton'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function Features() {
   return (
@@ -10,7 +11,7 @@ export default function Features() {
       <div className="flex justify-center items-start w-full">
         <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-44 flex flex-col lg:flex-row justify-center items-start gap-8 lg:gap-16">
           <div className="w-full lg:flex-1 relative h-64 sm:h-80 md:h-96 lg:h-[600px]">
-            <div className="hidden lg:flex w-64 sm:w-72 lg:w-96 h-64 sm:h-72 lg:h-96 p-3 sm:p-4 lg:left-[219px] lg:top-[171px] absolute bg-violet-800 rounded-br-[60px] sm:rounded-br-[80px] lg:rounded-br-[100px] justify-end items-end gap-2">
+            <div className="hidden lg:flex w-64 sm:w-72 lg:w-96 xl:w-[27rem] h-64 sm:h-72 lg:h-96 p-3 sm:p-4 lg:left-[219px] lg:top-[171px] absolute bg-violet-800 rounded-br-[60px] sm:rounded-br-[80px] lg:rounded-br-[100px] justify-end items-end gap-2">
               <div className="w-56 sm:w-64 lg:w-72 pl-4 sm:pl-6 lg:pl-8 justify-start text-white text-lg sm:text-2xl lg:text-3xl font-bold leading-relaxed sm:leading-8 lg:leading-9 font-serif">
                 {featuresData.images.leftText}
               </div>
@@ -61,7 +62,10 @@ export default function Features() {
               ))}
             </div>
 
-            <OrderButton />
+            <div className="w-full flex flex-col sm:flex-row justify-start items-center gap-4">
+              <OrderButton />
+              <WhatsAppButton />
+            </div>
           </div>
         </div>
       </div>

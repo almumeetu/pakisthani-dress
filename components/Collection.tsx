@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { FaWhatsapp } from 'react-icons/fa'
 import { collectionContent } from '@/data/collectionContent'
 import OrderButton from '@/components/OrderButton'
+import WhatsAppButton from './WhatsAppButton'
 
 export default function Collection() {
   return (
@@ -45,22 +45,11 @@ export default function Collection() {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <OrderButton className="w-full sm:w-auto" />
-            <a
-              href={`https://wa.me/${collectionContent.buttons.whatsapp.number.replace(/\s/g, '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-green-600 rounded-lg flex justify-center items-center gap-2 hover:bg-green-700 transition-colors border-2 border-green-700"
-            >
-              <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              <div className="flex flex-col items-start">
-                <div className="text-white text-xs sm:text-sm font-normal font-serif">
-                  {collectionContent.buttons.whatsapp.label}
-                </div>
-                <div className="text-white text-base sm:text-lg font-bold font-serif">
-                  {collectionContent.buttons.whatsapp.number}
-                </div>
-              </div>
-            </a>
+            <WhatsAppButton
+              phoneNumber={collectionContent.buttons.whatsapp.number}
+              labelText={collectionContent.buttons.whatsapp.label}
+              className="w-full sm:w-auto"
+            />
           </div>
         </div>
       </div>
